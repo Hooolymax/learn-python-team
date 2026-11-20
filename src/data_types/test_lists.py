@@ -72,7 +72,8 @@ def test_list_type():
     mixed_list = [list_of_chars, list_of_numbers]
     assert mixed_list == [['a', 'b', 'c'], [1, 2, 3]]
     assert mixed_list[0] == ['a', 'b', 'c']
-    assert mixed_list[0][1] == 'b'
+    assert mixed_list[0][1] == 'b'  # mixed_list[row][column]
+    assert mixed_list[1][-1] == 3  # negative indexes also work on the inner list
 
 
 def test_list_methods():
