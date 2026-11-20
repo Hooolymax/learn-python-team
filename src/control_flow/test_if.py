@@ -15,6 +15,7 @@ def test_if_statement():
 
     number = 15
     conclusion = ''
+    parity = ''
 
     if number < 0:
         conclusion = 'Number is less than zero'
@@ -24,5 +25,11 @@ def test_if_statement():
         conclusion = 'Number is greater than zero but less than one'
     else:
         conclusion = 'Number bigger than or equal to one'
+        # Nested condition: is a number that is at least one even or odd?
+        if number % 2 == 0:
+            parity = 'even'
+        else:
+            parity = 'odd'
 
+    assert parity == 'odd'
     assert conclusion == 'Number bigger than or equal to one'
