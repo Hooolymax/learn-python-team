@@ -232,8 +232,14 @@ flake8 ./src --statistics --show-source --count
 
 ## Team maintenance (COMP 354)
 
-This copy of learn-python is maintained by a four-person team for the COMP 354 software
+This copy of learn-python is maintained by a three-person team for the COMP 354 software
 configuration management assignment. Contributors work on their own branches and send pull
 requests to `main`; every pull request is reviewed by another team member before it is merged.
 
 Run the tests of one topic with `python -m pytest src/data_types/test_lists.py -v`.
+
+| Student | Name | Repository | Area |
+|---|---|---|---|
+| A (maintainer) | Wenshuo Pei | [dapeipeipeipei/learn-python-team](https://github.com/dapeipeipeipei/learn-python-team) | `src/data_types/test_lists.py` |
+| B | Likun Gu | [Owen353/learn-python-team](https://github.com/Owen353/learn-python-team) (fork) | `src/data_types/test_dictionaries.py` |
+| C | Jinghao Lai | [Hooolymax/learn-python-team](https://github.com/Hooolymax/learn-python-team) (fork) | `src/control_flow/test_if.py` |
