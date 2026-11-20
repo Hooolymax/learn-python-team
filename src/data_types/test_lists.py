@@ -75,6 +75,11 @@ def test_list_type():
     assert mixed_list[0][1] == 'b'  # mixed_list[row][column]
     assert mixed_list[1][-1] == 3  # negative indexes also work on the inner list
 
+    # The outer list stores references to the inner lists, so a change to an
+    # inner list is visible through mixed_list.
+    list_of_chars.append('d')
+    assert mixed_list[0] == ['a', 'b', 'c', 'd']
+
 
 def test_list_methods():
     """Test list methods."""
