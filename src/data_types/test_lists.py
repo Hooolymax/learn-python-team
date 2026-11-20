@@ -72,7 +72,9 @@ def test_list_type():
     mixed_list = [list_of_chars, list_of_numbers]
     assert mixed_list == [['a', 'b', 'c'], [1, 2, 3]]
     assert mixed_list[0] == ['a', 'b', 'c']
-    assert mixed_list[0][1] == 'b'
+    assert mixed_list[0][1] == 'b'  # the outer list stores references
+    list_of_chars.append('d')  # so a change to an inner list is visible outside
+    assert mixed_list[0] == ['a', 'b', 'c', 'd']
 
 
 def test_list_methods():
